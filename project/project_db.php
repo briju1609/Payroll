@@ -1,6 +1,8 @@
+<link rel="stylesheet" type="text/css" href="dbDesign.css">
 
 <?php
 	
+
 	echo "<h3>Information...</h3>";
 	
 	$servername = "localhost";
@@ -14,27 +16,27 @@
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}
-	echo "Connected successfully" . "<br>";
+	echo "<address>Connected successfully.</address>" . "<br>";
 	
 	/*
 	// Create databases
 	$sql = "CREATE DATABASE c0707229_brijesh";
 	if ($conn->query($sql) === TRUE) {
-		echo "Database created successfully";
+		echo "<address>Database created successfully.</address>";
 	} else {
-		echo "Error creating database: " . $conn->error . "<br>";
+		echo "<address>Error creating database: </address>" . $conn->error . "<br>";
 	}*/
 	
 	//Use database
 	$sql = "USE c0707229_brijesh";
 	if ($conn->query($sql) === TRUE) {
-		echo "Database changed successfully . <br>";
+		echo "<address>Database changed successfully.</address> <br>";
 	} else {
-		echo "Error connecting database: " . $conn->error. " <br>";
+		echo "<address>Error connecting database: </address>" . $conn->error. " <br>";
 	}
 	
 	
-	/*
+	
 	// sql to create table
 	$sql = "CREATE TABLE Employee (
 		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -52,9 +54,9 @@
 		)";
 	
 	if ($conn->query($sql) === TRUE) {
-		echo "Employee created successfully";
+		echo "<address>Employee created successfully.</address>";
 	} else {
-		echo "Error creating table: " . $conn->error . "<br>";
+		echo "<address>Error creating table: </address>" . $conn->error . "<br>";
 	}
 	
 	
@@ -196,14 +198,14 @@
 	
 	
 	//if ($conn->query($sql) === TRUE) {
-	echo "New record created successfully";
+	echo "<address>New record created successfully.</address>";
 	/* } else {
-	 echo "Error: " . $sql . "<br>" . $conn->error;
+	 echo "<address>Error: </address>" . $sql . "<br>" . $conn->error;
 	 }
 	
 	
 	
-		*/
+		
 	 /*
 	function Update(){
 	        // sql to delete a record
@@ -217,6 +219,6 @@
 	               die('Could not delete data: ' . mysql_error());
 	            }
 	            
-	            echo "Deleted data successfully\n";
+	            echo "<address>Deleted data successfully.</address>\n";
 	        }*/
 ?>

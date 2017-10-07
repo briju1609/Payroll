@@ -8,7 +8,7 @@
 	$result = $conn->query($sql) ;
 ?>
 
-<table border="1">
+<table border="2">
 <tr>
 <th>First Name</th>
 <th>Last Name</th>
@@ -72,7 +72,7 @@
         echo "</td>";
 
         echo "<td>";
-            echo "<input type='button' name='Update' value='Update' onclick='Update()'>";
+            echo "<input type='button' class='buttons' name='Update' value='Update' onclick='Update()'>";
         echo "</td>";
 
         echo "<td>";
@@ -81,7 +81,7 @@
         echo "</td>";
         
         echo "<td>";
-            echo "<input type='button' name='PDF' value='Export as PDF'>";
+            echo "<input type='button' class='buttons' name='PDF' value='Export as PDF' onclick='exportPDF()'>";
         echo "</td>";
         
 
@@ -93,12 +93,40 @@
    	 echo "0 results";
 	}
 	
-	   echo "Click here to Insert : " . "<input type='button' name='Insert' value='Insert' >"; 
-	   echo "<br>";
+	   echo "<pre>Click here to Insert : " . "<input type='button' class='buttons' name='Insert' value='Insert' onclick='insert()' ></pre>"; 
+	   //echo "<br>";
 		
+
 	   
 	//$stmt->close();
 	$conn->close();
 ?>
 <br>
 </table>
+
+<script>
+
+    function insert(){
+        window.location = "insertForm.php";
+    }
+
+    /*
+    function exportPDF(){
+    	// create an API client instance
+    	$client = new Pdfcrowd("username", "apikey");
+
+    	// convert a web page and store the generated PDF into a variable
+    	$pdf = $client->convertURI('http://www.google.com/');
+
+    	// set HTTP response headers
+    	header("Content-Type: application/pdf");
+    	header("Cache-Control: max-age=0");
+    	header("Accept-Ranges: none");
+    	header("Content-Disposition: attachment; filename=\"google_com.pdf\"");
+
+    	// send the generated PDF 
+    	echo $pdf;
+    }*/
+    
+        
+</script>

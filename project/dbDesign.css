@@ -1,0 +1,27 @@
+.buttons{
+	border-radius: 20px;
+	color: crimson;
+	background-color: snow;
+}
+body{
+	background-image: url('../project/bg.jpg');
+}
+th{
+	color: chocolate;
+	background-color: moccasin;
+}
+td{
+	background-color: mistyrose;
+}
+table{
+	border-color: black;
+}
+h2,h3{
+	color: navy;
+}
+address{
+	color: darkred;
+}
+pre{
+	color: indigo;
+}
